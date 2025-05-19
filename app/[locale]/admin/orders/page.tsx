@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+ import { Metadata } from 'next'
 import Link from 'next/link'
 import { auth } from '@/auth'
 import DeleteDialog from '@/components/shared/delete-dialog'
@@ -91,11 +91,11 @@ export default async function OrdersPage(props: {
                   <TableCell>
                     <Button
                       size='sm'
-                      className={`h-6 text-xs ${
+                      className={h-6 text-xs ${
                         order.isPaid
                           ? 'bg-green-500 hover:bg-green-600 text-white'
                           : 'bg-red-500 hover:bg-red-600 text-white'
-                      }`}
+                      }}
                     >
                       {order.isPaid && order.paidAt
                         ? formatDateTime(order.paidAt).dateTime
@@ -105,11 +105,11 @@ export default async function OrdersPage(props: {
                   <TableCell>
                     <Button
                       size='sm'
-                      className={`h-6 text-xs ${
+                      className={h-6 text-xs ${
                         order.isDelivered
                           ? 'bg-green-500 hover:bg-green-600 text-white'
                           : 'bg-red-500 hover:bg-red-600 text-white'
-                      }`}
+                      }}
                     >
                       {order.isDelivered && order.deliveredAt
                         ? formatDateTime(order.deliveredAt).dateTime
@@ -137,7 +137,7 @@ export default async function OrdersPage(props: {
                       size='sm'
                       className='hover:bg-gray-100 dark:hover:bg-gray-800'
                     >
-                      <Link href={`/admin/orders/${order._id}`}>
+                      <Link href={/admin/orders/${order._id}}>
                         {t('Details')}
                       </Link>
                     </Button>
